@@ -1,3 +1,7 @@
+import 'package:book/screens/auth/login_screen.dart';
+import 'package:book/screens/auth/onboard.dart';
+import 'package:book/screens/home/book_catalog_screen.dart';
+import 'package:book/utils/view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +14,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+        debugShowCheckedModeBanner: false, home: LoginScreen());
   }
 }
