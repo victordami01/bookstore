@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../screens/auth/page1.dart';
 import '../screens/auth/page2.dart';
-import '../screens/auth/page3.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -32,7 +31,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 children: const [
                   Page1(),
                   Page2(),
-                  Page3(),
                 ],
               ),
             ),
@@ -40,8 +38,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             // Page Indicator using smooth_page_indicator
             SmoothPageIndicator(
               controller: _pageController,
-              count: 3,
-              effect: ColorTransitionEffect(
+              count: 2,
+              effect: ExpandingDotsEffect(
                 dotHeight: 8,
                 dotWidth: 8,
                 activeDotColor: Colors.purple,

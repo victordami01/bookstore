@@ -32,7 +32,7 @@ class Onboard extends StatelessWidget {
                 fontFamily: 'Poppins',
               ),
             ),
-          ],
+          ],  
         ),
       ),
     );

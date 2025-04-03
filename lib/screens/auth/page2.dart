@@ -1,5 +1,6 @@
+import 'package:book/screens/auth/login_screen.dart';
+import 'package:book/screens/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:book/utils/theme.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -7,14 +8,17 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFCF8F4), // Background color
+      backgroundColor: Color.fromARGB(255, 248, 243, 239), // Background color
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Spacer(),
-          Image.asset('assets/images/1.png', height: 150),
-          SizedBox(height: 40),
-          Image.asset('assets/images/1.png', height: 150),
+          Image.asset(
+            'assets/images/1.png',
+            height: 600,
+            width: 600,
+          ),
+          // SizedBox(height: 40),
           Spacer(),
           Text(
             "Book Stack",
@@ -40,12 +44,17 @@ class Page2 extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(color: Color(0xFF6A40D6)),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignupScreen()),
+                    );
+                  },
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 14),
                     child: Text(
                       "Sign Up",
                       style: TextStyle(
@@ -58,13 +67,18 @@ class Page2 extends StatelessWidget {
               ),
               SizedBox(width: 12),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF6A40D6),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding: EdgeInsets.symmetric(horizontal: 43, vertical: 23),
                 ),
                 child: Text(
                   "Log In",
